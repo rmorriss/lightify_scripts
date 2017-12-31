@@ -15,5 +15,5 @@ gateway.update_group_list()
 #def off(gateway):
 group = gateway.groups()[GROUP1]
 lights = ([gateway.lights()[addr] for addr in group.lights()])
-group.set_onoff(0)
+group.set_luminance(0, 5)
 gateway.update_all_light_status()

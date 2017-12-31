@@ -1,4 +1,5 @@
 from lightify import Lightify
+import time
 
 # the group should contain at least two lights
 
@@ -15,5 +16,6 @@ gateway.update_group_list()
 #def off(gateway):
 group = gateway.groups()[GROUP1]
 lights = ([gateway.lights()[addr] for addr in group.lights()])
+group.set_luminance(100, 5)
 group.set_onoff(1)
 gateway.update_all_light_status()
