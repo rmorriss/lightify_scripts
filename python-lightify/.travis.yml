@@ -1,0 +1,19 @@
+# Tell Travis you want a Python environment to test in
+sudo: false
+language: python
+
+# List the versions of Python you'd like to test against
+python:
+  - "2.7"
+  - "3.4"
+
+install:
+   # Install the dependencies the app itself has
+ - pip install coveralls
+
+# Tell Travis how to run the test script itself
+script:
+  - coverage run --source=lightify test.py -m py.test
+
+after_success:
+  - coveralls

@@ -1,0 +1,15 @@
+*.py[co~]
+*.swp
+*.pyc
+*.mo
+*.log
+dist/*
+env/*
+log/*
+docs/build/*
+lightify.egg-info/*
+.coverage
+.ropeproject
+lightify/.ropeproject
+*.pot
+.pypirc
